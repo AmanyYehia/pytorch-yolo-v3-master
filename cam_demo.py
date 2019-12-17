@@ -103,9 +103,17 @@ if __name__ == '__main__':
     
     videofile = 'video.avi'
     
-    cap = cv2.VideoCapture(0)
-    
-    assert cap.isOpened(), 'Cannot capture source'
+    from IPython.display import Image
+    try:
+      cap= take_photo()
+      print('Saved to {}'.format(filename))
+  
+      # Show the image which was just taken.
+      display(Image(cap))
+    except Exception as err:
+      # Errors will be thrown if the user does not have a webcam or if they do not
+      # grant the page permission to access it.
+      print(str(err))
     
     frames = 0
     start = time.time()    
