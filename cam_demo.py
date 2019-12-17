@@ -72,7 +72,7 @@ def arg_parse():
 
 if __name__ == '__main__':
     cfgfile = "cfg/yolov3.cfg"
-    weightsfile = "yolov3.weights"
+    weightsfile = "../yolov3.weights"
     num_classes = 80
 
     args = arg_parse()
