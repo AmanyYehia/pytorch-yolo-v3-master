@@ -104,6 +104,7 @@ if __name__ == '__main__':
     videofile = 'video.avi'
     
     from IPython.display import Image
+    cap= take_photo()
     try:
       cap= take_photo()
       print('Saved to {}'.format(filename))
