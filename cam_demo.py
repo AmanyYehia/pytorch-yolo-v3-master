@@ -1,4 +1,4 @@
-from __future__ import division
+rom __future__ import division
 import time
 import torch 
 import torch.nn as nn
@@ -72,7 +72,7 @@ def arg_parse():
 
 if __name__ == '__main__':
     cfgfile = "cfg/yolov3.cfg"
-    weightsfile = "../yolov3.weights"
+    weightsfile = "yolov3.weights"
     num_classes = 80
 
     args = arg_parse()
@@ -103,18 +103,9 @@ if __name__ == '__main__':
     
     videofile = 'video.avi'
     
-    from IPython.display import Image
-    cap= take_photo()
-    try:
-      cap= take_photo()
-      print('Saved to {}'.format(filename))
-  
-      # Show the image which was just taken.
-      display(Image(cap))
-    except Exception as err:
-      # Errors will be thrown if the user does not have a webcam or if they do not
-      # grant the page permission to access it.
-      print(str(err))
+    cap = cv2.VideoCapture(0)
+    
+    assert cap.isOpened(), 'Cannot capture source'
     
     frames = 0
     start = time.time()    
@@ -171,7 +162,3 @@ if __name__ == '__main__':
         else:
             break
     
-
-    
-    
-
