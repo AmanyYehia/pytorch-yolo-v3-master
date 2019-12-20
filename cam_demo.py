@@ -105,7 +105,7 @@ if __name__ == '__main__':
     
     cap = cv2.VideoCapture(0)
     
-    assert cap.isOpened(), 'Cannot capture source'
+    #assert cap.isOpened(), 'Cannot capture source'
     
     frames = 0
     start = time.time()    
