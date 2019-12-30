@@ -1,4 +1,4 @@
-rom __future__ import division
+from __future__ import division
 import time
 import torch 
 import torch.nn as nn
@@ -105,7 +105,7 @@ if __name__ == '__main__':
     
     cap = cv2.VideoCapture(-1)
     
-    #assert cap.isOpened(), 'Cannot capture source'
+    assert cap.isOpened(), 'Cannot capture source'
     
     frames = 0
     start = time.time()    
